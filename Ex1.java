@@ -2,6 +2,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ex1 {
+    /**
+     * Program liczy zasięg i maksymalną wysokość rzutu ukośnego
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj prędkość: ");
