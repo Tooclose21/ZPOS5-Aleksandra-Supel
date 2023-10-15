@@ -1,13 +1,23 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ex1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Podaj prędkość: ");
-        double v0 = scanner.nextDouble();
+        double v0;
+        try {
+            v0 = scanner.nextDouble();
+        } catch (InputMismatchException e) {
+            throw new IllegalArgumentException("Prędkość musi być liczbą rzeczywistą");
+        }
         System.out.println("Podaj kąt uderzenia: ");
-        double angle = scanner.nextDouble();
+        double angle;
+        try {
+            angle = scanner.nextDouble();
+        } catch (InputMismatchException e) {
+            throw new IllegalArgumentException("Kąt uderzenia musi być liczbą");
+        }
         double angle_radian = Math.toRadians(angle);
 
         scanner.close();
