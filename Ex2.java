@@ -15,7 +15,6 @@ public class Ex2 {
             if (compare.equals("stop")) {
                 break;
             }
-
             for (int i = 0; i < compare.length(); i++) {
                 int id = reference.indexOf(compare.charAt(i));
                 if (id == -1) {
@@ -27,6 +26,7 @@ public class Ex2 {
                 System.out.println("Łańcuch poprawny.");
             } else {
                 System.out.println("Łańcuch zawiera niedozwolone znaki.");
+                wrong = 0;
             }
         }
 
