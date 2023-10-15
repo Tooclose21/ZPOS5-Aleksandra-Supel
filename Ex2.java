@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class Ex2 {
+    /**
+     * Program sprawdza poprawność znaków w łańcuchu względem łańcucha referencyjnego
+     * @param args command line args
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
