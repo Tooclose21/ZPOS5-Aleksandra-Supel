@@ -1,13 +1,34 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ex6 {
+    /**
+     * Program wyswietla date podana przez uzytkownika w formacie DD-MM-YYYY.
+     * @param args command line arguments.
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        int dzien;
+        int miesiac;
+        int rok;
+
         System.out.println("Podaj dzień, miesiąc oraz rok: ");
-        int dzien = scanner.nextInt();
-        int miesiac = scanner.nextInt();
-        int rok = scanner.nextInt();
+        try {
+            dzien = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            throw new IllegalArgumentException("Dzien powinien byc liczba");
+        }
+        try {
+            miesiac = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            throw new IllegalArgumentException("Miesiac powinien byc liczba");
+        }
+        try {
+            rok = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            throw new IllegalArgumentException("Rok powinien byc liczba");
+        }
 
         try {
             String data2 = data(dzien, miesiac, rok);
@@ -17,6 +38,14 @@ public class Ex6 {
         }
     }
 
+    /**
+     * Funkcja zwraca date w formacie DD-MM-YYYY.
+     * @param dzien dzien miesaca.
+     * @param miesiac miesiac roku.
+     * @param rok rok.
+     * @return Data w formacie DD-MM-YYYY.
+     * @throws IllegalArgumentException kiedy podany dzien jest niepoprawny.
+     */
     public static String data(int dzien, int miesiac, int rok) {
         int dopuszczalnyDzien = 31;
 
