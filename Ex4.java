@@ -2,6 +2,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ex4 {
+    /**
+     * Program wyświetla tabliczke mnożena do n, gdzie n jest liczba podana przez uzytkownika
+     * @param args command line args
+     */
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         int n;
